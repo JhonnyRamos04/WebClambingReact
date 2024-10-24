@@ -1,4 +1,4 @@
-
+import { MountainIcon } from "./icons/MountainIcon"
 
 export const Footer = () => {
     return (
@@ -9,7 +9,7 @@ export const Footer = () => {
                         <a href='https://flowbite.com/' className='flex items-center'>
                             <span
                                 className='self-center flex items-center filter drop-shadow-md text-2xl font-semibold whitespace-nowrap text-white'
-                            >TheClimb <Mountain /></span>
+                            >TheClimb <MountainIcon /></span>
                         </a>
                     </div>
                     <div>

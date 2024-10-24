@@ -1,10 +1,20 @@
+import { Footer } from "./components/Footer"
+import { Header } from "./components/Header"
+import { Hero } from "./components/Hero"
+import { LandScapes } from "./components/LandScapes"
+import { Why } from "./components/Why"
 
 function App() {
 
   return (
     <>
+
       <main>
-        <h1 className="text-gray-900">hola</h1>
+        <Header />
+        <Hero />
+        <LandScapes />
+        <Why />
+        <Footer />
       </main>
     </>
   )

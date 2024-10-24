@@ -1,3 +1,5 @@
+import { HeroLink } from "./ui/HeroLink"
+
 export const Hero = () => {
     return (
         <section className='bg-gray-100 py-16 lg:py-20 flex items-center justify-center'>
