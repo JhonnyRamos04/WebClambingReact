@@ -1,4 +1,4 @@
-export const HeroLink = ({ promp }) => {
+export const HeroLink = ({ children }) => {
     return (
         <>
             <div className='flex items-center justify-center'>
@@ -13,7 +13,7 @@ export const HeroLink = ({ promp }) => {
                         <span className='relative z-10 block px-6 py-3 rounded-xl bg-sky-800'>
                             <div className='relative z-10 flex items-center space-x-2'>
                                 <span className='transition-all duration-500 group-hover:translate-x-1'
-                                >{promp}</span>
+                                >{children}</span>
                                 <svg
                                     className='w-6 h-6 transition-transform duration-500 group-hover:translate-x-1'
                                     data-slot='icon'

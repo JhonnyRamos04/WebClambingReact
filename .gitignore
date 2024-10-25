@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+Paleta.txt
 dist-ssr
 *.local
 
