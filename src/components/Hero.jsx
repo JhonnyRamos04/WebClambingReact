@@ -3,10 +3,10 @@ import { Wave } from "./ui/Wave"
 
 export const Hero = () => {
     return (
-        <section className='flex '>
-            <Wave className="rotate-90 h-[160px] w-full absolute bottom-[369px] -right-28 z-0  " aria-hidden="true" />
+        <section className='flex'>
+            <Wave className="rotate-90 h-auto w-full absolute bottom-[369px] xl:bottom-[581px] xl:-right-[146px] z-0  " aria-hidden="true" />
             <div
-                className='bg-[#457A5F] h-[700px] flex flex-col px-20 py-4 items-center justify-center'
+                className='bg-[#457A5F] xl:h-[600px] flex flex-col px-20 py-4 items-center justify-center'
             >
                 <div className="max-w-[600px]">
                     <h1 className='text-4xl md:text-5xl font-bold text-gray-100 mb-4'>
