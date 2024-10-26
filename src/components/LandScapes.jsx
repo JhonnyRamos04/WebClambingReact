@@ -3,7 +3,7 @@ import { Gallery } from "./ui/Gallery"
 export const LandScapes = () => {
     return (
         <section className='bg-gray-100 md:py-16 flex items-center justify-center'>
-            <div className='flex flex-col lg:flex-row items-center justify-around w-full'>
+            <div className='flex flex-col lg:flex-row items-center justify-around w-full mt-6'>
                 <Gallery />
                 <div className='max-w-[600px] p-4 md:p-0'>
                     <h2

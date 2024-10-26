@@ -22,7 +22,7 @@ export const Header = () => {
                             <a className='hover:underline' href='/'>Inicio</a>
                         </li>
                         <li>
-                            <a className='hover:underline' href='#'>Sobre Nosotros</a>
+                            <a className='hover:underline' href='#'>Rutas</a>
                         </li>
                         <li>
                             <a className='hover:underline' href='#'>Contacto</a>
