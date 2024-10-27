@@ -1,14 +1,14 @@
 import { HeroLink } from "./ui/HeroLink"
 import { Wave } from "./ui/Wave"
 
-export const Hero = () => {
+export const Hero = ({ newRef }) => {
     return (
-        <section className='flex'>
+        <section className='flex' ref={newRef}>
             <Wave className="rotate-90 h-auto w-full absolute bottom-[369px] xl:bottom-[581px] xl:-right-[146px] z-0  " aria-hidden="true" />
             <div
                 className='bg-[#457A5F] xl:h-[600px] flex flex-col px-20 py-4 items-center justify-center'
             >
-                <div className="max-w-[600px]">
+                <div className="max-w-[600px]" >
                     <h1 className='text-4xl md:text-5xl font-bold text-gray-100 mb-4'>
                         ¡Desafía tus límites con la Escalada Deportiva!
                     </h1>
