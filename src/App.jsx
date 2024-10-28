@@ -3,7 +3,8 @@ import { Footer } from "./components/Footer"
 import { Header } from "./components/Header"
 import { Hero } from "./components/Hero"
 import { LandScapes } from "./components/LandScapes"
-import { Why } from "./components/Why"
+import { WhyBento } from "./components/WhyBento"
+import { AboutUs } from "./components/AboutUs"
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <main >
         <Hero newRef={ref} />
         <LandScapes />
-        <Why />
+        <WhyBento />
+        <AboutUs />
         <Footer />
       </main>
     </>
