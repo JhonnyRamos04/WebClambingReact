@@ -3,7 +3,7 @@ export const Why = () => {
         <section
             className='bg-gray-100 flex flex-col justify-center items-center p-8 gap-y-8'
         >
-            <h2 className='text-gray-800 text-2xl font-bold mt-12'>
+            <h2 className='text-gray-800 text-3xl font-bold mt-12'>
                 ¿Por qué comenzar con la escalada?
             </h2>
             <div className='flex flex-wrap gap-x-4 gap-y-4 md:gap-y-0 p-4'>
