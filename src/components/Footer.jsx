@@ -2,7 +2,7 @@ import { MountainIcon } from "./icons/MountainIcon"
 
 export const Footer = () => {
     return (
-        <footer className='bg-gray-900'>
+        <footer className='bg-[#457A5F]'>
             <div className='mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
                 <div className='md:flex md:justify-between'>
                     <div className='mb-6 md:mb-0'>
@@ -14,7 +14,7 @@ export const Footer = () => {
                     </div>
                     <div>
                         <div>
-                            <ul className='text-gray-400 font-medium flex flex-wrap gap-x-6'>
+                            <ul className='text-gray-100 font-medium flex flex-wrap gap-x-6'>
                                 <li className='mb-4'>
                                     <a href='#' className='hover:underline'>Inicio</a>
                                 </li>
@@ -28,14 +28,14 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <hr className='my-6 sm:mx-auto border-gray-700 lg:my-8' />
+                <hr className='my-6 sm:mx-auto border-gray-100 lg:my-8' />
                 <div className='sm:flex sm:items-center sm:justify-between'>
-                    <span className='text-sm sm:text-center text-gray-400'
+                    <span className='text-sm sm:text-center text-gray-100'
                     >© 2024 <a href='#' className='hover:underline'>Jhonny Ramos™</a>. Todos
                         los derechos reservados.
                     </span>
                     <div className='flex mt-4 sm:justify-center sm:mt-0'>
-                        <a href='#' className='text-gray-500 hover:text-white'>
+                        <a href='#' className='text-gray-100 hover:text-white'>
                             <svg
                                 className='w-4 h-4'
                                 aria-hidden='true'
@@ -51,7 +51,7 @@ export const Footer = () => {
                             <span className='sr-only'>Facebook page</span>
                         </a>
 
-                        <a href='#' className='text-gray-500 hover:text-white ms-5'>
+                        <a href='#' className='text-gray-100 hover:text-white ms-5'>
                             <svg
                                 className='w-4 h-4'
                                 aria-hidden='true'
@@ -66,7 +66,7 @@ export const Footer = () => {
                             </svg>
                             <span className='sr-only'>Twitter page</span>
                         </a>
-                        <a href='#' className='text-gray-500 hover:text-white ms-5'>
+                        <a href='#' className='text-gray-100 hover:text-white ms-5'>
                             <svg
                                 className='w-4 h-4'
                                 aria-hidden='true'

@@ -4,7 +4,7 @@ import { Wave } from "./ui/Wave"
 export const Hero = ({ newRef }) => {
     return (
         <section className='flex' ref={newRef}>
-            <Wave className="rotate-90 h-auto w-full absolute bottom-[369px] xl:bottom-[581px] xl:-right-[146px] z-0  " aria-hidden="true" />
+            <Wave fill={"#457A5F"} className="rotate-90 h-auto w-full absolute bottom-[560px] -right-[144px] xl:bottom-[581px] xl:-right-[146px] z-0  " aria-hidden="true" />
             <div
                 className='bg-[#457A5F] md:h-[600px] xl:h-[640px]  flex flex-col px-20 py-4 items-center justify-center'
             >
