@@ -11,6 +11,12 @@ export default {
       'sm': '375px'
     },
     extend: {
+      backgroundImage: {
+        'Humbold': 'url(/PicoHumbold.jpg)',
+        'PicoEspejo': 'url(/PicoEspejo.jpg)',
+        'PicoElToro': 'url(/PicoElToro.jpg)',
+        'PicoBond': 'url(/PicoBondpland.jpg)'
+      }
     },
   },
   plugins: [],

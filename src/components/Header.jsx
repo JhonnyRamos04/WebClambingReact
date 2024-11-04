@@ -15,9 +15,9 @@ export const Header = ({ entry }) => {
                         TheClimb <MountainIcon />
                     </span>
                     <div className=" top-0 fixed w-full z-30 transition-colors duration-200 delay-75">
-                        <div className={`transition-all duration-300 delay-75 flex justify-end ease-in-out py-2 px-2 md:px-10 backdrop-blur-sm bg-gray-50/10 shadow-lg gap-x-10 text-gray-800 items-center shadow-slate-900/5 relative w-full  ${!entry ? 'top-0' : '-top-20'}`}>
+                        <div className={`transition-all duration-300 delay-75 flex justify-end ease-in-out py-2 px-2 md:px-10 backdrop-blur-sm bg-gray-800/15 shadow-lg gap-x-10 text-gray-100 items-center shadow-slate-900/5 relative w-full  ${!entry ? 'top-0' : '-top-20'}`}>
                             <span
-                                className={`filter drop-shadow-md font-black text-3xl absolute text-gray-900 top-4 left-6 flex justify-center items-center z-10 `}
+                                className={`filter drop-shadow-md font-black text-3xl absolute top-4 left-6 flex justify-center items-center z-10 `}
                             >
                                 TheClimb <MountainIcon />
                             </span>
@@ -52,15 +52,15 @@ export const Header = ({ entry }) => {
                 id='menu-pop'
             >
                 <ul
-                    className='text-gray-800 mt-8 font-bold [&>li]:px-4 [&>li]:py-2 [&>li]:w-full flex h-full py-10 justify-start items-center flex-col gap-y-4 text-2xl'
+                    className='text-gray-100 mt-8 font-bold [&>li]:px-4 [&>li]:py-2 [&>li]:w-full flex h-full py-10 justify-start items-center flex-col gap-y-4 text-2xl'
                 >
-                    <li className='hover:text-gray-600 transition duration-200'>
+                    <li className='hover:text-gray-200 transition duration-200'>
                         <a href=''></a>Inicio
                     </li>
-                    <li className='hover:text-gray-600 transition duration-200'>
+                    <li className='hover:text-gray-200 transition duration-200'>
                         <a href=''></a>Sobre Nosotros
                     </li>
-                    <li className='hover:text-gray-600 transition duration-200'>
+                    <li className='hover:text-gray-200 transition duration-200'>
                         <a href=''></a>Contacto
                     </li>
                 </ul>

@@ -1,10 +1,14 @@
-import { HeroLink } from "./ui/HeroLink"
-import { Wave } from "./ui/Wave"
+import { SliderHero } from "./SliderHero"
 
 export const Hero = ({ newRef }) => {
     return (
-        <section className='flex' ref={newRef}>
-            <Wave fill={"#457A5F"} className="rotate-90 h-auto w-full absolute bottom-[560px] -right-[144px] xl:bottom-[581px] xl:-right-[146px] z-0  " aria-hidden="true" />
+        <section ref={newRef}>
+            <SliderHero />
+        </section>
+    )
+}
+/*
+<Wave fill={"#457A5F"} className="rotate-90 h-auto w-full absolute bottom-[560px] -right-[144px] xl:bottom-[581px] xl:-right-[146px] z-0  " aria-hidden="true" />
             <div
                 className='bg-[#457A5F] md:h-[600px] xl:h-[640px]  flex flex-col px-20 py-4 items-center justify-center'
             >
@@ -28,7 +32,4 @@ export const Hero = ({ newRef }) => {
             <div className="relative md:left-44 xl:left-48 top-16 -rotate-6">
                 <img src="/HeroClambing.png" alt="Clambing" className="w-[360px]" />
             </div>
-        </section>
-    )
-}
-
+*/
