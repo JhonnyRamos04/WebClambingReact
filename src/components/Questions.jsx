@@ -25,16 +25,15 @@ export const Questions = () => {
     ]
 
     return (
-        <section className="relative h-screen bg-gray-800 overflow-hidden flex items-center flex-col text-gray-100">
+        <section className="relative h-auto min-h-screen bg-gray-800 overflow-hidden flex items-center flex-col text-gray-100">
             <h2 className="text-3xl font-bold my-12">Preguntas Frecuentes</h2>
-            <div className="z-10" >
+            <div className="z-10 mb-12" >
                 {QUESTIONS.map((item, index) => (
                     <QuestionsItems key={index} {...item} />
                 ))}
             </div>
             <img className="absolute -right-32 -rotate-12 " src="/HeroClambing.png" alt="HeroClambing" />
-
-
+            <img className="absolute -left-56 rotate-12" src="MountainFigure.png" alt="Mountain" />
         </section>
     )
 }

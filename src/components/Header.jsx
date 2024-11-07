@@ -32,12 +32,12 @@ export const Header = ({ entry }) => {
                                         <a className='hover:underline' href='#'>Rutas</a>
                                     </li>
                                     <li>
-                                        <a className='hover:underline' href='#'>Contacto</a>
+                                        <a className='hover:underline' href='#'>Instrutores</a>
                                     </li>
                                 </ul>
                             </nav>
                             <div className='hidden md:block'>
-                                <HeroLink>Inscribite Ya</HeroLink>
+                                <HeroLink>Contacto</HeroLink>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ export const Header = ({ entry }) => {
                         <a href=''></a>Sobre Nosotros
                     </li>
                     <li className='hover:text-gray-200 transition duration-200'>
-                        <a href=''></a>Contacto
+                        <a href=''></a>Tienda
                     </li>
                 </ul>
             </div>

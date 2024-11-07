@@ -7,6 +7,8 @@ import { WhyBento } from "./components/WhyBento"
 //import { AboutUs } from "./components/AboutUs"
 import { Adventage } from "./components/Adventage"
 import { Questions } from "./components/Questions"
+import { Contact } from "./components/Contact"
+import { Teachers } from "./components/Teachers"
 
 
 
@@ -18,7 +20,9 @@ function App() {
       <main >
         <Hero newRef={ref} />
         <Adventage />
+        <Teachers />
         <WhyBento />
+        <Contact />
         <Questions />
         <Footer />
       </main>
