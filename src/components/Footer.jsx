@@ -1,6 +1,13 @@
 import { MountainIcon } from "./icons/MountainIcon"
+import { Link, Navigate } from "react-router-dom"
 
-export const Footer = () => {
+export const Footer = ({ ref }) => {
+
+    const handleClick = () => {
+        Navigate('/')
+        ref.current.scrollIntoView({ behavior: 'smooth' })
+    }
+
     return (
         <footer className='bg-gray-900'>
             <div className=' mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
@@ -16,19 +23,19 @@ export const Footer = () => {
                         <div>
                             <ul className='text-gray-100 font-medium flex flex-wrap gap-x-6'>
                                 <li className='mb-4'>
-                                    <a href='#' className='hover:underline'>Inicio</a>
+                                    <Link to='/' className='hover:underline'>Inicio</Link>
                                 </li>
                                 <li>
-                                    <a href='#' className='hover:underline'>Instrutores</a>
+                                    <Link to='/Coach' className='hover:underline'>Instructores</Link>
                                 </li>
                                 <li>
-                                    <a href='#' className='hover:underline'>Rutas</a>
+                                    <Link to='/' className='hover:underline'>Rutas</Link>
                                 </li>
                                 <li>
-                                    <a href='#' className='hover:underline'>Contacto</a>
+                                    <Link to='/Contact' className='hover:underline'>Contacto</Link>
                                 </li>
                                 <li>
-                                    <a href='#' className='hover:underline'>Preguntas Frecuentes</a>
+                                    <Link to='/' onClick={handleClick} className='hover:underline'>Preguntas Frecuentes</Link>
                                 </li>
                             </ul>
                         </div>

@@ -11,6 +11,7 @@ export function Contact() {
         window.scrollTo(0, 0);
     }, [location]);
 
+
     return (
         <>
             <Header />

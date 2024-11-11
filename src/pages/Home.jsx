@@ -1,4 +1,3 @@
-import { useInView } from "react-intersection-observer"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { Hero } from "../components/Hero"
@@ -8,30 +7,29 @@ import { Questions } from "../components/Questions"
 import { Contact } from "../components/Contact"
 import { TeachersHero } from "../components/TeachersHero"
 import { useLocation } from "react-router-dom"
-import { useLayoutEffect } from "react"
+import { useLayoutEffect, useRef } from "react"
 
 export function Home() {
-    const { ref, inView } = useInView()
-
-    const location = useLocation();
-
+    const location = useLocation()
+    const ref = useRef()
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
-    }, [location]);
+    }, [location])
 
+    console.log(scroll)
     return (
         <>
-            <Header entry={inView} />
-            <main >
-                <Hero newRef={ref} />
+            <Header />
+            <main  >
+                <Hero />
                 <Adventage />
                 <TeachersHero />
                 <WhyBento />
                 <Contact />
-                <Questions />
+                <Questions ref={ref} />
 
             </main>
-            <Footer />
+            <Footer ref={ref} />
         </>
     )
 }

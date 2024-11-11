@@ -6,7 +6,7 @@ export const Adventage = () => {
             <h2 className="text-center text-gray-300 mt-8">¿Por qué comenzar con la escalada?</h2>
             <div className='flex gap-8 md:gap-20 items-center justify-center flex-wrap mt-6 xl:mt-16' >
                 <div className="w-32 flex flex-col items-center text-sky-500 ">
-                    <div className=" mgc_barbell_line text-2xl"></div>
+                    <div className=" mgc_barbell_fill text-2xl"></div>
                     <span className=" text-center text-base font-extrabold">Resistencia</span>
                 </div>
                 <div className="w-32 flex flex-col items-center text-yellow-400" >

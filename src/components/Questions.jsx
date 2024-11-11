@@ -1,5 +1,5 @@
 import { QuestionsItems } from "./QuestionsItems"
-export const Questions = () => {
+export const Questions = ({ ref }) => {
 
     const QUESTIONS = [
         {
@@ -29,13 +29,30 @@ export const Questions = () => {
     ]
 
     return (
-        <section className="relative h-auto min-h-[500px] bg-gray-800 overflow-hidden flex items-center flex-col text-gray-100">
+        <section id="Question" ref={ref} className="relative h-auto min-h-[500px] bg-gray-800 overflow-hidden flex items-center flex-col text-gray-100">
             <h2 className="text-3xl font-bold my-12">Preguntas Frecuentes</h2>
-            <div className="z-10 grid grid-cols-2 gap-3 mb-6 h-auto" >
-                {QUESTIONS.map((item, index) => (
-                    <QuestionsItems key={index} {...item} />
-                ))}
+            <div className="flex gap-2">
+                <div>
+                    {
+                        QUESTIONS.map((item, index) => (
+
+                            index < 3 ? <QuestionsItems key={index} {...item} /> : <></>
+
+                        ))
+                    }
+                </div>
+
+                <div>
+                    {QUESTIONS.map((item, index) => (
+
+                        index >= 3 ? <QuestionsItems key={index} {...item} /> : <></>
+
+                    ))}
+                </div>
+
             </div>
-        </section>
+
+
+        </section >
     )
 }

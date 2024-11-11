@@ -6,16 +6,16 @@ export const FormContact = () => {
             <div className="form-container h-[600px]">
                 <form className="form ">
                     <div className="form-group">
-                        <label htmlFor="email">Nombre</label>
-                        <input required="" name="email" id="email" type="text" />
+                        <label htmlFor="email">Nombre <span className='mgc_user_2_fill'></span></label>
+                        <input required="" name="email" id="email" placeholder='Nombre Completo' type="text" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>
-                        <input required="" name="email" id="email" type="text" />
+                        <label htmlFor="email">Email <span className='mgc_paper_2_fill'></span></label>
+                        <input required="" name="email" id="email" placeholder='Theclimb@gmail.com' type="text" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="textarea">¿Cómo podemos ayudarte?</label>
-                        <textarea required="" cols="50" rows="10" id="textarea" name="textarea">      </textarea>
+                        <textarea required="" cols="50" rows="10" id="textarea" placeholder='Mensaje...' name="textarea"></textarea>
                     </div>
                     <button type='submit' className=" text-gray-800 flex justify-center gap-2 items-center self-end shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"> <svg
                         className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"

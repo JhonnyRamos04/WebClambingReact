@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 export const TeachersHero = () => {
     return (
         <section className=' bg-gray-800 flex items-center justify-center h-[500px] overflow-hidden'>
-            <div className="mt-12 w-[1000px] border-gray-100 border-b-2 text-gray-100  flex rounded-xl">
-                <div className="flex flex-col  justify-center gap-y-6 py-6 px-2 w-full">
-                    <h3 className="font-bold text-4xl">Instructores certificados</h3>
+            <div className="mt-12 w-[1000px] bg-gray-900 border-gray-100 border-b-4 text-gray-100  flex rounded-xl">
+                <div className="flex flex-col  justify-center gap-y-6 py-6 px-16 w-full">
+                    <h3 className="font-bold text-4xl text-yellow-300/90">Instructores certificados</h3>
                     <p className="text-pretty font-semibold text-xl">
                         Nuestros entrenadores especializados te guiarán en tu camino,
                         ya sea que estés dando tus primeros pasos en este deporte o buscando
@@ -23,7 +23,7 @@ export const TeachersHero = () => {
                     </svg>Más información
                     </Link>
                 </div>
-                <div className="w-[400px] ">
+                <div className="w-[600px] ">
                     <img className="rounded-lg " src="Traineer.png" alt="" />
                 </div>
             </div>
