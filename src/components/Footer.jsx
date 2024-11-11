@@ -2,8 +2,8 @@ import { MountainIcon } from "./icons/MountainIcon"
 
 export const Footer = () => {
     return (
-        <footer className='bg-gray-800'>
-            <div className='bg-[#889CB8]/40 mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
+        <footer className='bg-gray-900'>
+            <div className=' mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
                 <div className='md:flex md:justify-between'>
                     <div className='mb-6 md:mb-0'>
                         <a href='https://flowbite.com/' className='flex items-center'>

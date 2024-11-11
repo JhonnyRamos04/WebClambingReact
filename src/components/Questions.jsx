@@ -21,19 +21,21 @@ export const Questions = () => {
         {
             Quest: '¿Qué tipos de escalada existen?',
             Content: ' Existen diversos tipos de escalada, como la escalada deportiva, la búlder, la escalada en hielo, entre otras. En nuestro centro nos enfocamos en la escalada deportiva, que se realiza en paredes artificiales con rutas de diferentes niveles de dificultad.'
+        },
+        {
+            Quest: '¿Qué herramientas se usan en la escalada?',
+            Content: 'Para practicar escalada de forma segura y disfrutar al máximo de esta actividad, necesitarás contar con el equipo adecuado. Aquí te presentamos los elementos esenciales: Cuerda, Arnés y Casco'
         }
     ]
 
     return (
-        <section className="relative h-auto min-h-screen bg-gray-800 overflow-hidden flex items-center flex-col text-gray-100">
+        <section className="relative h-auto min-h-[500px] bg-gray-800 overflow-hidden flex items-center flex-col text-gray-100">
             <h2 className="text-3xl font-bold my-12">Preguntas Frecuentes</h2>
-            <div className="z-10 mb-12" >
+            <div className="z-10 grid grid-cols-2 gap-3 mb-6 h-auto" >
                 {QUESTIONS.map((item, index) => (
                     <QuestionsItems key={index} {...item} />
                 ))}
             </div>
-            <img className="absolute -right-32 -rotate-12 " src="/HeroClambing.png" alt="HeroClambing" />
-            <img className="absolute -left-56 rotate-12" src="MountainFigure.png" alt="Mountain" />
         </section>
     )
 }

@@ -9,12 +9,12 @@ export const QuestionsItems = ({ Quest, Content }) => {
     }
 
     return (
-        <div className={`w-[700px] transition-all delay-200 duration-100 py-3 rounded-md px-4 border-b-2 h-12 ${active ? 'h-[260px] bg-green-700/25' : ''}  overflow-hidden my-2`}>
-            <h3 className="text-2xl"><button onClick={handleClick} className="w-full flex justify-between" type="button">{Quest}
-                <span className="mgc_arrow_down_fill"></span></button></h3>
+        <div className={`w-[650px] transition-all delay-200 duration-100 py-2 rounded-md px-4 border-b-4 h-12 ${active ? 'h-[220px] bg-gray-900/50' : ''}  overflow-hidden my-2`}>
+            <h3 className="text-xl"><button onClick={handleClick} className="w-full flex justify-between" type="button">{Quest}
+                <span className="mgc_plus_fill"></span></button></h3>
             {
                 active &&
-                <p className=" text-xl font-normal p-6">
+                <p className=" text-lg font-normal p-6">
                     {Content}
                 </p>
             }
