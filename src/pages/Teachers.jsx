@@ -13,7 +13,7 @@ export function Teachers() {
 
     return (
         <>
-            <Header />
+            <Header Active={true} />
             <main>
                 <Teacher />
             </main>

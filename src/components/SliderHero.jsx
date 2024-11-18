@@ -58,7 +58,7 @@ export const SliderHero = () => {
                 <div className="absolute z-30 flex  -translate-x-1/2 bottom-2 left-1/2 space-x-3 rtl:space-x-reverse">
                     {
                         PICTURES.map(item => (
-                            <button key={item.id} type="button" className={`w-3 transition-colors duration-300 h-3 rounded-full border border-white ${nextImg === item.id ? 'bg-white/100' : 'bg-white/10'}`} aria-label="Slide 1" ></button>
+                            <div key={item.id} type="button" className={`w-3 transition-colors duration-300 h-3 rounded-full border border-white ${nextImg === item.id ? 'bg-white/100' : 'bg-white/10'}`} aria-label="Slide 1" ></div>
 
                         ))
                     }

@@ -31,7 +31,7 @@ export const Questions = ({ ref }) => {
     return (
         <section id="Question" ref={ref} className="relative h-auto min-h-[500px] bg-gray-800 overflow-hidden flex items-center flex-col text-gray-100">
             <h2 className="text-3xl font-bold my-12">Preguntas Frecuentes</h2>
-            <div className="flex gap-2">
+            <div className="flex gap-2 mb-12">
                 <div>
                     {
                         QUESTIONS.map((item, index) => (

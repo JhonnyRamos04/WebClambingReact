@@ -4,7 +4,7 @@ export const Contact = () => {
     return (
         <section className=' bg-gray-800 flex items-center justify-center h-[500px] overflow-hidden'>
             <div className="my-24 xl:mt-12 bg-gray-900/80 w-[1000px] border-gray-100 border-b-4 text-gray-100 p-4 flex rounded-xl">
-                <div className="flex flex-col  justify-center gap-y-6 py-6 px-2 w-full">
+                <div className="flex flex-col  justify-center gap-y-6 py-6 px-8 w-full">
                     <h3 className="font-bold text-4xl text-green-500/80">Empieza a escalar!</h3>
                     <p className="text-pretty font-semibold text-xl">
                         Explora paredes naturales,

@@ -3,7 +3,7 @@ import { MountainIcon } from "./icons/MountainIcon"
 import { ToggleButton } from "./ui/ToggleButton"
 import { Link } from "react-router-dom"
 
-export const Header = () => {
+export const Header = ({ Active }) => {
     const [scroll, setScroll] = useState()
 
     window.addEventListener('scroll', () => {
@@ -15,12 +15,12 @@ export const Header = () => {
             {
                 <>
                     <span
-                        className={`filter drop-shadow-md font-black text-3xl absolute text-gray-100 top-4 left-6 flex justify-center items-center z-10 `}
+                        className={`filter drop-shadow-md font-black text-3xl absolute ${Active ? 'hidden' : ''} text-gray-100 top-4 left-6 flex justify-center items-center z-10 `}
                     >
                         TheClimb <MountainIcon />
                     </span>
-                    <div className=" top-0 fixed w-full z-30 transition-colors duration-200 delay-75">
-                        <div className={`transition-all duration-300 delay-75 flex justify-end ease-in-out py-2 px-2 md:px-10 backdrop-blur-sm bg-gray-800/15 shadow-lg gap-x-10 text-gray-100 items-center shadow-slate-900/5 relative w-full  ${!scroll == 0 ? 'top-0' : '-top-20'}`}>
+                    <div className=" top-0 fixed w-full z-30 transition-colors duration-200 delay-75 ">
+                        <div className={`transition-all duration-300 delay-75 flex justify-end ease-in-out py-2 px-2 md:px-10 backdrop-blur-sm bg-gray-800/15 shadow-lg gap-x-10 text-gray-100 items-center shadow-slate-900/5 relative w-full  ${!scroll == 0 || Active ? 'top-0' : '-top-20'}`}>
                             <span
                                 className={`filter drop-shadow-md font-black text-3xl absolute top-4 left-6 flex justify-center items-center z-10 `}
                             >
@@ -34,7 +34,7 @@ export const Header = () => {
                                         <Link className='hover:underline' to='/'>Inicio</Link>
                                     </li>
                                     <li>
-                                        <Link className='hover:underline' to='/'>Rutas</Link>
+                                        <Link className='hover:underline' to='/Routes'>Rutas</Link>
                                     </li>
                                     <li>
                                         <Link className='hover:underline' to='/Coach'>Instructores</Link>

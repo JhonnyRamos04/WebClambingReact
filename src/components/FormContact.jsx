@@ -1,21 +1,43 @@
+import { useState } from 'react';
 import './Form.css'
 
 export const FormContact = () => {
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+
+    const handleChange = (event) => {
+        setFormData({
+            ...formData,
+            [event.target.name]: event.target.value,
+        });
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        console.log(formData); // Aquí tienes acceso a los datos del formulario
+        // Enviar los datos a un servidor, por ejemplo
+    };
+
     return (
-        <section className='flex bg-gray-800 py-24 px-8 justify-center items-center'>
+        <section className='flex bg-gray-800 py-24 px-8 justify-center items-center' onSubmit={handleSubmit}>
             <div className="form-container h-[600px]">
                 <form className="form ">
                     <div className="form-group">
-                        <label htmlFor="email">Nombre <span className='mgc_user_2_fill'></span></label>
-                        <input required="" name="email" id="email" placeholder='Nombre Completo' type="text" />
+                        <label htmlFor="name">Nombre <span className='mgc_user_2_fill'></span></label>
+                        <input onChange={handleChange} required="" name="name" id="name" placeholder='Nombre Completo' type="text" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email <span className='mgc_paper_2_fill'></span></label>
-                        <input required="" name="email" id="email" placeholder='Theclimb@gmail.com' type="text" />
+                        <input onChange={handleChange} required="" name="email" id="email" placeholder='Theclimb@gmail.com' type="text" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="textarea">¿Cómo podemos ayudarte?</label>
-                        <textarea required="" cols="50" rows="10" id="textarea" placeholder='Mensaje...' name="textarea"></textarea>
+                        <label htmlFor="message">¿Cómo podemos ayudarte?</label>
+                        <textarea onChange={handleChange} required="" cols="50" rows="10" id="message" placeholder='Mensaje...' name="message"></textarea>
                     </div>
                     <button type='submit' className=" text-gray-800 flex justify-center gap-2 items-center self-end shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"> <svg
                         className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
@@ -29,14 +51,16 @@ export const FormContact = () => {
                     </svg>Contacto</button>
                 </form>
             </div>
-            <div className='relative h-[560px] w-1/2 overflow-hidden rounded-r-lg text-gray-100 bg-gray-900 font-semibold text-2xl '>
-                <div className='p-8'>
-                    <h3 className='font-bold text-3xl'>Información de contacto</h3>
-                    <span className='flex items-center gap-x-2'><div className='mgc_phone_fill' aria-hidden></div> 0412-7895561</span>
-                    <span className='flex items-center gap-x-2'><div className='mgc_at_fill' aria-hidden></div> climpvzla@gmail.com</span>
-                </div>
-                <div className='absolute bottom-0'>
-                    <img className='' src="MountainForm.webp" alt="" />
+            <div className='relative h-[560px] w-1/2 overflow-hidden rounded-r-lg text-gray-100 bg-PicoElToro font-semibold text-2xl '>
+                <div className='bg-gray-900/60 size-full backdrop-blur-md'>
+                    <div className='p-8'>
+                        <h3 className='font-bold text-3xl'>Información de contacto</h3>
+                        <span className='flex items-center gap-x-2'><div className='mgc_phone_fill' aria-hidden></div> 0412-7895561</span>
+                        <span className='flex items-center gap-x-2'><div className='mgc_at_fill' aria-hidden></div> climpvzla@gmail.com</span>
+                    </div>
+                    <div className='absolute bottom-0 '>
+                        <img src="MountainForm.webp" alt="Mountain-render" />
+                    </div>
                 </div>
             </div>
 

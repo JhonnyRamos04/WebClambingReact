@@ -14,8 +14,8 @@ export const WhyBento = () => {
                         <span className="font-bold text-2xl text-left text-pretty tracking-separated">EL Pico Humbold</span>
                     </div>
                 </a>
-                <a href="#" className="rounded-2xl bg-PicoEspejo hover:scale-105 hover:border border-green-600 transition-all duration-200 bg-cover md:col-start-3 md:row-span-2 h-full flex items-start">
-                    <div className="w-full h-auto bg-gray-700/30 px-6 py-3 rounded-t-2xl filter backdrop-blur-sm">
+                <a href="#" className="rounded-2xl bg-PicoEspejo hover:scale-105 hover:border border-green-600 transition-all duration-200 bg-cover md:col-start-3 md:row-span-2 h-full flex items-end">
+                    <div className="w-full h-auto bg-gray-700/30 px-6 py-3 rounded-b-2xl filter backdrop-blur-sm">
                         <span className="font-bold text-2xl text-left text-pretty tracking-separated ">EL Pico Espejo</span>
                     </div>
 
