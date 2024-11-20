@@ -7,18 +7,24 @@ export const Teacher = () => {
             id: 1,
             name: 'Carlos Carrillo',
             Description: 'Su energía positiva y su capacidad para inspirar a otros hacen de Carlos un entrenador excepcional. Él cree en el potencial de cada escalador y los empuja a alcanzar sus metas en el bouldering.',
+            age: '48',
+            experience: '10',
             img: './Carlos.png'
         },
         {
             id: 2,
             name: 'Milena Flores',
             Description: 'Para Milena, la escalada tradicional es mucho más que un deporte. Es una forma de conectar con la naturaleza y de encontrar la paz interior. Transmite esta pasión a sus alumnos, animándoles a disfrutar de la belleza de los paisajes mientras escalan.',
+            age: '26',
+            experience: '2',
             img: './Milena.png'
         },
         {
             id: 3,
             name: 'Yant Colmenares',
             Description: 'Con una técnica impecable y una pasión contagiosa por la escalada deportiva, Yant guía a sus alumnos a superar sus límites con paciencia y entusiasmo. Su enfoque holístico combina técnica, fuerza y mentalidad positiva, creando un ambiente donde cada escalador se siente apoyado y motivado.',
+            age: '30',
+            experience: '5',
             img: './Yant.png'
         }
     ]
@@ -29,10 +35,8 @@ export const Teacher = () => {
                 <h1 className="mt-16  text-gray-100 text-4xl font-bold">Conoce a nuestros instructores</h1>
                 <div className="flex flex-wrap w-full gap-6 justify-center items-center">
                     {
-                        TEACHERS.map(item => (
-                            <div key={item.id} className="hover:scale-105 transition-all duration-150">
-                                <TeacherItem id={item.id} img={item.img} name={item.name} description={item.Description} />
-                            </div>
+                        TEACHERS.map((item, index) => (
+                            <TeacherItem key={index} className="hover:scale-105 transition-all duration-150" id={item.id} experience={item.experience} age={item.age} img={item.img} name={item.name} description={item.Description} />
                         ))
                     }
                 </div>

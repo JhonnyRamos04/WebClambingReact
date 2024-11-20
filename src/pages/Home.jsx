@@ -23,8 +23,8 @@ export function Home() {
             <main  >
                 <Hero />
                 <Adventage />
-                <TeachersHero />
                 <WhyBento />
+                <TeachersHero />
                 <Contact />
                 <Questions ref={ref} />
 

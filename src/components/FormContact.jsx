@@ -13,15 +13,15 @@ export const FormContact = () => {
         setFormData({
             ...formData,
             [event.target.name]: event.target.value,
-        });
-    };
+        })
+    }
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault()
 
-        console.log(formData); // Aquí tienes acceso a los datos del formulario
-        // Enviar los datos a un servidor, por ejemplo
-    };
+        console.log(formData)
+
+    }
 
     return (
         <section className='flex bg-gray-800 py-24 px-8 justify-center items-center' onSubmit={handleSubmit}>

@@ -2,17 +2,20 @@ import { Link } from "react-router-dom"
 
 export const Contact = () => {
     return (
-        <section className=' bg-gray-800 flex items-center justify-center h-[500px] overflow-hidden'>
-            <div className="my-24 xl:mt-12 bg-gray-900/80 w-[1000px] border-gray-100 border-b-4 text-gray-100 p-4 flex rounded-xl">
+        <section className=' bg-[#06201e] flex items-center justify-center h-[500px] overflow-hidden'>
+            <div className="my-24 xl:mt-12 bg-[#2c3b3a] w-[1000px] border-gray-100 border-b-4 text-gray-100 p-4 flex rounded-xl">
+                <div className="w-[400px] p-2">
+                    <img className="rounded-lg " src="MountainLandscape-1.jpg" alt="" />
+                </div>
                 <div className="flex flex-col  justify-center gap-y-6 py-6 px-8 w-full">
-                    <h3 className="font-bold text-4xl text-green-500/80">Empieza a escalar!</h3>
+                    <h3 className="font-bold text-4xl text-amber-200/80">Empieza a escalar!</h3>
                     <p className="text-pretty font-semibold text-xl">
                         Explora paredes naturales,
                         disfruta de vistas panorámicas y siente la libertad de moverte con
                         gracia y precisión. ¡Te garantizamos una experiencia única!
                     </p>
 
-                    <Link to='/Contact' className=" text-gray-800 flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"> <svg
+                    <Link to='/Contact' className=" text-gray-800 flex justify-center gap-2 items-center ml-80 shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"> <svg
                         className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
                         viewBox="0 0 16 19"
                         xmlns="http://www.w3.org/2000/svg"
@@ -23,9 +26,7 @@ export const Contact = () => {
                         ></path>
                     </svg>Contacto</Link>
                 </div>
-                <div className="w-[400px] p-2">
-                    <img className="rounded-lg " src="MountainLandscape-1.jpg" alt="" />
-                </div>
+
             </div>
         </section>
     )

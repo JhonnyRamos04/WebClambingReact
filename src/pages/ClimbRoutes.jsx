@@ -1,8 +1,16 @@
+import { useLayoutEffect } from "react";
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { RoutesBlog } from "../components/RoutesBlog"
+import { useLocation } from "react-router-dom";
 
 export function ClimbRoutes() {
+
+    const location = useLocation();
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location])
 
     return (
         <>
