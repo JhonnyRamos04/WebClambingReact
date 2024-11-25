@@ -25,8 +25,24 @@ const router = createBrowserRouter([
   },
   {
     path: '/Routes',
-    element: <ClimbRoutes />,
+    element: <ClimbRoutes newId={'H'} />,
   },
+  {
+    path: '/Routes/Humbold',
+    element: <ClimbRoutes newId={'H'} />,
+  },
+  {
+    path: '/Routes/ElToro',
+    element: <ClimbRoutes newId={'T'} />,
+  },
+  {
+    path: '/Routes/Espejo',
+    element: <ClimbRoutes newId={'E'} />,
+  },
+  {
+    path: '/Routes/BondPland',
+    element: <ClimbRoutes newId={'B'} />,
+  }
 ])
 
 createRoot(document.getElementById('root')).render(

@@ -15,7 +15,12 @@ export default {
         'Humbold': 'url(/PicoHumbold.jpg)',
         'PicoEspejo': 'url(/PicoEspejo.jpg)',
         'PicoElToro': 'url(/PicoElToro.jpg)',
-        'PicoBond': 'url(/PicoBondpland.jpg)'
+        'PicoBond': 'url(/PicoBondpland.jpg)',
+        'ClimbBg': 'url(/ClimbersBg.webp)',
+        'BlogHum': 'url(/HumboldBg.jfif)',
+        'BlogToro': 'url(/ElToroBg.jpg)',
+        'BlogEspejo': 'url(/EspejoBg.webp)',
+        'BlogBon': 'url(/BonPlandBg.jpg)'
       }
     },
   },

@@ -12,24 +12,25 @@ import { useLayoutEffect, useRef } from "react"
 export function Home() {
     const location = useLocation()
     const ref = useRef()
+    document.body.style.overflow = 'auto'
+
     useLayoutEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0)
     }, [location])
 
-    console.log(scroll)
     return (
         <>
             <Header />
             <main  >
                 <Hero />
                 <Adventage />
-                <WhyBento />
                 <TeachersHero />
+                <WhyBento />
                 <Contact />
                 <Questions ref={ref} />
 
             </main>
-            <Footer ref={ref} />
+            <Footer />
         </>
     )
 }

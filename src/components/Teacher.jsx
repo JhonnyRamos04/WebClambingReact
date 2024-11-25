@@ -32,7 +32,7 @@ export const Teacher = () => {
     return (
         <>
             <section className="flex flex-col gap-y-6 bg-gray-800 h-auto p-12 items-center">
-                <h1 className="mt-16  text-gray-100 text-4xl font-bold">Conoce a nuestros instructores</h1>
+                <h1 className="mt-16  text-gray-100 text-4xl font-bold text-center md:text-left">Conoce a nuestros instructores</h1>
                 <div className="flex flex-wrap w-full gap-6 justify-center items-center">
                     {
                         TEACHERS.map((item, index) => (

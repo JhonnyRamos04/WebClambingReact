@@ -2,12 +2,13 @@ import { useState } from 'react';
 import './Form.css'
 
 export const FormContact = () => {
-
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleChange = (event) => {
         setFormData({
@@ -18,40 +19,92 @@ export const FormContact = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        setIsSubmitting(true);
 
-        console.log(formData)
+        // Simular envío de datos
+        setTimeout(() => {
+            console.log('Datos enviados:', formData);
+            setIsSubmitting(false);
+            setIsSubmitted(true);
+            setFormData({ name: '', email: '', message: '' }); // Resetear el formulario
 
+            // Resetear el estado de envío después de 3 segundos
+            setTimeout(() => setIsSubmitted(false), 3000);
+        }, 2000);
     }
 
     return (
-        <section className='flex bg-gray-800 py-24 px-8 justify-center items-center' onSubmit={handleSubmit}>
+        <section className='flex bg-gray-800 py-24 px-8 justify-center items-center'>
             <div className="form-container h-[600px]">
-                <form className="form ">
+                <form className="form" onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="name">Nombre <span className='mgc_user_2_fill'></span></label>
-                        <input onChange={handleChange} required="" name="name" id="name" placeholder='Nombre Completo' type="text" />
+                        <input
+                            onChange={handleChange}
+                            value={formData.name}
+                            required
+                            name="name"
+                            id="name"
+                            placeholder='Nombre Completo'
+                            type="text"
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email <span className='mgc_paper_2_fill'></span></label>
-                        <input onChange={handleChange} required="" name="email" id="email" placeholder='Theclimb@gmail.com' type="text" />
+                        <input
+                            onChange={handleChange}
+                            value={formData.email}
+                            required
+                            name="email"
+                            id="email"
+                            placeholder='Theclimb@gmail.com'
+                            type="email"
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">¿Cómo podemos ayudarte?</label>
-                        <textarea onChange={handleChange} required="" cols="50" rows="10" id="message" placeholder='Mensaje...' name="message"></textarea>
+                        <textarea
+                            onChange={handleChange}
+                            value={formData.message}
+                            required
+                            cols="50"
+                            rows="10"
+                            id="message"
+                            placeholder='Mensaje...'
+                            name="message"
+                        ></textarea>
                     </div>
-                    <button type='submit' className=" text-gray-800 flex justify-center gap-2 items-center self-end shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"> <svg
-                        className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
-                        viewBox="0 0 16 19"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <button
+                        type='submit'
+                        className="text-gray-800 flex justify-center gap-2 items-center self-end shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+                        disabled={isSubmitting}
                     >
-                        <path
-                            d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                            className="fill-gray-800 group-hover:fill-gray-800"
-                        ></path>
-                    </svg>Contacto</button>
+                        {isSubmitting ? (
+                            <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        ) : isSubmitted ? (
+                            <svg className="h-5 w-5 mr-3 text-green-500" fill="none" viewBox="0 0 24 24" stroke="#232323">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                        ) : (
+                            <svg
+                                className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
+                                viewBox="0 0 16 19"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                                    className="fill-gray-800 group-hover:fill-gray-800"
+                                ></path>
+                            </svg>
+                        )}
+                        {isSubmitting ? 'Enviando...' : isSubmitted ? 'Enviado' : 'Contacto'}
+                    </button>
                 </form>
             </div>
-            <div className='relative h-[560px] w-1/2 overflow-hidden rounded-r-lg text-gray-100 bg-PicoElToro font-semibold text-2xl '>
+            <div className='hidden md:block relative h-[560px] w-1/2 overflow-hidden rounded-r-lg text-gray-100 bg-PicoElToro font-semibold text-2xl '>
                 <div className='bg-gray-900/60 size-full backdrop-blur-md'>
                     <div className='p-8'>
                         <h3 className='font-bold text-3xl'>Información de contacto</h3>
@@ -63,7 +116,7 @@ export const FormContact = () => {
                     </div>
                 </div>
             </div>
-
         </section>
     )
 }
+

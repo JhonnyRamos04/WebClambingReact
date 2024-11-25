@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 
 export function Contact() {
     const location = useLocation();
+    document.body.style.overflow = 'auto'
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0);

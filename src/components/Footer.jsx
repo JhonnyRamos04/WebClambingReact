@@ -1,25 +1,21 @@
 import { MountainIcon } from "./icons/MountainIcon"
-import { Link, Navigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import TwitterIcon from "./icons/TwitterIcon"
 import InstagramIcon from "./icons/InstagramIcon"
 
-export const Footer = ({ ref }) => {
+export const Footer = () => {
 
-    const handleClick = () => {
-        Navigate('/')
-        ref.current.scrollIntoView({ behavior: 'smooth' })
-    }
 
     return (
         <footer className='bg-gray-900'>
             <div className=' mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
                 <div className='md:flex md:justify-between'>
                     <div className='mb-6 md:mb-0'>
-                        <a href='https://flowbite.com/' className='flex items-center'>
+                        <Link to='/' className='flex items-center'>
                             <span
                                 className='self-center flex items-center filter drop-shadow-md text-2xl font-semibold whitespace-nowrap text-white'
                             >TheClimb <MountainIcon /></span>
-                        </a>
+                        </Link>
                     </div>
                     <div>
                         <div>
@@ -36,9 +32,6 @@ export const Footer = ({ ref }) => {
                                 <li>
                                     <Link to='/Contact' className='hover:underline'>Contacto</Link>
                                 </li>
-                                <li>
-                                    <Link to='/' onClick={handleClick} className='hover:underline'>Preguntas Frecuentes</Link>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -46,7 +39,7 @@ export const Footer = ({ ref }) => {
                 <hr className='my-6 sm:mx-auto border-gray-100 lg:my-8' />
                 <div className='sm:flex sm:items-center sm:justify-between'>
                     <span className='text-sm sm:text-center text-gray-100'
-                    >© 2024 <a href='#' className='hover:underline'>Jhonny Ramos™</a>. Todos
+                    >© 2024 Jhonny Ramos™. Todos
                         los derechos reservados.
                     </span>
                     <div className='flex mt-4 sm:justify-center sm:mt-0'>

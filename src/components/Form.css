@@ -115,3 +115,9 @@
     background-color: #232323;
     border-color: #fff;
 }
+
+@media (width <= 768px){
+    .form-container{
+        width: 100vw;
+    }
+}
