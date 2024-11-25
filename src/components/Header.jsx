@@ -17,11 +17,11 @@ export const Header = ({ Active }) => {
         <header className='text-gray-800'>
             {
                 <>
-                    <span
+                    <Link to='/'
                         className={`filter drop-shadow-md shadow md:shadow-none backdrop-blur-md bg-gray-800/15 w-full md:w-auto px-6 py-5 md:p-0 md:backdrop-blur-none md:bg-gray-800/0 font-black text-3xl fixed md:absolute ${Active ? 'md:hidden' : ''} text-gray-100 md:top-4 md:left-6 flex items-center z-30 `}
                     >
                         TheClimb <MountainIcon />
-                    </span>
+                    </Link>
                     <div className=" top-0 fixed w-full z-30 transition-colors duration-200 delay-75 ">
                         <div className={`transition-all duration-300 delay-75 md:flex justify-end ease-in-out py-2 px-2 md:px-10 backdrop-blur-sm bg-gray-800/15 hidden shadow-lg gap-x-10 text-gray-100 items-center shadow-slate-900/5 relative w-full ${!scroll == 0 || Active ? 'top-0' : '-top-20'}`}>
                             <Link to='/'

@@ -46,7 +46,7 @@ export const WhyBento = () => {
                         </div>
                     </Link>
                     <Link
-                        to="/Route/BondPland"
+                        to="/Routes/BondPland"
                         className="col-span-1 group"
                         aria-label="Explorar El Pico Bonpland"
                     >
